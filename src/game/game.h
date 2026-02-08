@@ -8,5 +8,10 @@ typedef struct {
     float accum;
 } GameState;
 
+typedef enum {
+    GAME_ACTION_PULSE = 1
+} GameAction;
+
 void game_init(GameState* g);
 void game_update(GameState* g, float dt);
+int  game_action(GameState* g, GameAction action);

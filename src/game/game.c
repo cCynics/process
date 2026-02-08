@@ -20,3 +20,13 @@ void game_update(GameState* g, float dt) {
         g->accum -= 1.0f;
     }
 }
+
+int game_action(GameState* g, GameAction action) {
+    switch (action) {
+        case GAME_ACTION_PULSE:
+            g->bits += 5;
+            return 1;
+        default:
+            return 0;
+    }
+}
